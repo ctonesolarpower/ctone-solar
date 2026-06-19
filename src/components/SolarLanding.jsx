@@ -6,13 +6,14 @@ const SolarLanding = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <div id="home" className="min-h-screen bg-white p-4 font-sans animate-fade-in">
+        <div id="home" className="min-h-screen bg-white font-sans animate-fade-in pt-20 px-4">
 
-            {/* --- NAVIGATION COMPONENT --- */}
-            <nav className="flex items-center justify-between py-2 max-w-7xl mx-auto mb-4 relative">
+            {/* --- FIXED NAVIGATION COMPONENT --- */}
+            <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+              <div className="flex items-center justify-between py-3 px-4 max-w-7xl mx-auto">
                 {/* Logo */}
-                <a href="#home" className="text-2xl font-bold text-orange-500 cursor-pointer hover:scale-105 transition-transform duration-300">
-                    {t('brand')}
+                <a href="#home" className="flex items-center cursor-pointer hover:scale-105 transition-transform duration-300">
+                    <img src="/ctone-logo.png" alt="CTONE Solar" className="h-20 w-auto object-contain" />
                 </a>
 
                 {/* Desktop Links */}
@@ -22,25 +23,23 @@ const SolarLanding = () => {
                     <li><a href="#services" className="hover:text-orange-500 transition-colors duration-300">{t('projects')}</a></li>
                     <li><a href="#gallery" className="hover:text-orange-500 transition-colors duration-300">{t('gallery')}</a></li>
                     <li><a href="#testimonials" className="hover:text-orange-500 transition-colors duration-300">{t('happyCustomers')}</a></li>
-                    <li><a href="#testimonials" className="hover:text-orange-500 transition-colors duration-300">{t('reviews')}</a></li>
                     <li><a href="#contact-us" className="hover:text-orange-500 transition-colors duration-300">{t('contactUs')}</a></li>
                 </ul>
 
                 {/* Language Toggle, CTA Button & Hamburger */}
                 <div className="flex items-center gap-3">
                     {/* Premium Sliding Toggle Switch */}
-                    <div 
+                    <div
                         onClick={toggleLanguage}
                         className="relative w-20 h-9 bg-gray-100 border border-gray-200/80 rounded-full p-1 flex items-center justify-between cursor-pointer select-none transition-all duration-300 shadow-inner"
                         title={language === 'en' ? 'Switch to Gujarati / ગુજરાતીમાં બદલો' : 'Switch to English / અંગ્રેજીમાં બદલો'}
                     >
                         {/* Smooth sliding backdrop */}
-                        <div 
-                            className={`absolute top-1 bottom-1 w-[46%] rounded-full bg-orange-500 shadow-md shadow-orange-500/30 transition-all duration-300 ease-out ${
-                                language === 'en' ? 'left-1' : 'left-[50%]'
-                            }`}
+                        <div
+                            className={`absolute top-1 bottom-1 w-[46%] rounded-full bg-orange-500 shadow-md shadow-orange-500/30 transition-all duration-300 ease-out ${language === 'en' ? 'left-1' : 'left-[50%]'
+                                }`}
                         />
-                        
+
                         {/* Labels */}
                         <span className={`z-10 text-[10px] font-bold tracking-wider pl-2.5 transition-colors duration-300 ${language === 'en' ? 'text-white' : 'text-gray-500 hover:text-gray-700'}`}>
                             EN
@@ -56,7 +55,7 @@ const SolarLanding = () => {
                     </a>
 
                     {/* Mobile Hamburger Icon */}
-                    <button 
+                    <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className="lg:hidden text-gray-700 hover:text-orange-500 focus:outline-none p-1.5 rounded-xl hover:bg-gray-50 transition-colors duration-300 cursor-pointer"
                         aria-label="Toggle navigation menu"
@@ -72,19 +71,18 @@ const SolarLanding = () => {
                         )}
                     </button>
                 </div>
-            </nav>
+              </div>
 
-            {/* Mobile Navigation Drawer */}
-            <div 
-                className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden z-50 relative ${
-                    isMobileMenuOpen ? 'max-h-[440px] opacity-100 mb-4' : 'max-h-0 opacity-0 pointer-events-none'
-                }`}
-            >
-                <div className="bg-white/95 backdrop-blur-md border border-gray-100 rounded-3xl p-6 shadow-2xl flex flex-col gap-5">
+              {/* Mobile Navigation Drawer */}
+              <div
+                className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${isMobileMenuOpen ? 'max-h-[440px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+                    }`}
+              >
+                <div className="bg-white border-t border-gray-100 px-6 py-4 shadow-lg flex flex-col gap-5">
                     <ul className="flex flex-col gap-4 text-gray-600 font-semibold text-sm">
                         <li>
-                            <a 
-                                href="#home" 
+                            <a
+                                href="#home"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="block hover:text-orange-500 py-1 transition-colors duration-200"
                             >
@@ -92,8 +90,8 @@ const SolarLanding = () => {
                             </a>
                         </li>
                         <li>
-                            <a 
-                                href="#about-us" 
+                            <a
+                                href="#about-us"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="block hover:text-orange-500 py-1 transition-colors duration-200"
                             >
@@ -101,8 +99,8 @@ const SolarLanding = () => {
                             </a>
                         </li>
                         <li>
-                            <a 
-                                href="#services" 
+                            <a
+                                href="#services"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="block hover:text-orange-500 py-1 transition-colors duration-200"
                             >
@@ -110,8 +108,8 @@ const SolarLanding = () => {
                             </a>
                         </li>
                         <li>
-                            <a 
-                                href="#gallery" 
+                            <a
+                                href="#gallery"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="block hover:text-orange-500 py-1 transition-colors duration-200"
                             >
@@ -119,8 +117,8 @@ const SolarLanding = () => {
                             </a>
                         </li>
                         <li>
-                            <a 
-                                href="#testimonials" 
+                            <a
+                                href="#testimonials"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="block hover:text-orange-500 py-1 transition-colors duration-200"
                             >
@@ -128,17 +126,8 @@ const SolarLanding = () => {
                             </a>
                         </li>
                         <li>
-                            <a 
-                                href="#testimonials" 
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="block hover:text-orange-500 py-1 transition-colors duration-200"
-                            >
-                                {t('reviews')}
-                            </a>
-                        </li>
-                        <li>
-                            <a 
-                                href="#contact-us" 
+                            <a
+                                href="#contact-us"
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="block hover:text-orange-500 py-1 transition-colors duration-200"
                             >
@@ -146,9 +135,9 @@ const SolarLanding = () => {
                             </a>
                         </li>
                     </ul>
-                    
+
                     {/* Mobile CTA inside Drawer */}
-                    <a 
+                    <a
                         href="#contact-us"
                         onClick={() => setIsMobileMenuOpen(false)}
                         className="w-full text-center bg-orange-500 hover:bg-orange-600 text-white py-3.5 rounded-2xl transition-all duration-350 font-bold text-sm shadow-lg shadow-orange-500/25 block"
@@ -156,10 +145,11 @@ const SolarLanding = () => {
                         {t('getQuote')}
                     </a>
                 </div>
-            </div>
+              </div>
+            </nav>
 
             {/* --- HERO SECTION COMPONENT --- */}
-            <main className="relative w-full max-w-7xl mx-auto rounded-[2rem] overflow-hidden min-h-[80vh] flex items-center justify-center p-6 md:p-12 lg:p-24 shadow-2xl">
+            <main className="relative w-full max-w-7xl mx-auto rounded-[2rem] overflow-hidden min-h-[80vh] flex items-center justify-center p-6 md:p-12 lg:p-24 shadow-2xl mt-4">
 
                 {/* Background Layer with Dark Overlay for Text Readability */}
                 <div
@@ -211,7 +201,7 @@ const SolarLanding = () => {
                 </div>
 
                 {/* Floating Card 2: Right Side Stats */}
-                <div className="hidden lg:block absolute top-2/3 right-10 -translate-y-1/2 bg-white/95 backdrop-blur-sm rounded-3xl p-7 shadow-2xl min-w-[260px]">
+                <div className="hidden lg:block absolute top-[75%] right-10 -translate-y-1/2 bg-white/95 backdrop-blur-sm rounded-3xl p-7 shadow-2xl min-w-[260px]">
                     <p className="text-xs text-gray-400 font-medium mb-1 uppercase tracking-wide">{t('solarUnitsInstalled')}</p>
                     <h3 className="text-4xl font-bold text-gray-900 mb-6 tracking-tight">10,000+</h3>
 

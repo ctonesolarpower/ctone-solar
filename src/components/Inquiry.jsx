@@ -1,6 +1,15 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
 
+const GUJARAT_CITIES = [
+    'Ahmedabad', 'Amreli', 'Anand', 'Modasa', 'Palanpur', 'Bharuch',
+    'Bhavnagar', 'Botad', 'Chhota Udaipur', 'Dahod', 'Ahwa', 'Khambhalia',
+    'Gandhinagar', 'Veraval', 'Jamnagar', 'Junagadh', 'Bhuj', 'Nadiad',
+    'Lunavada', 'Mehsana', 'Morbi', 'Rajpipla', 'Navsari', 'Godhra',
+    'Patan', 'Porbandar', 'Rajkot', 'Himmatnagar', 'Surat', 'Surendranagar',
+    'Vyara', 'Vadodara'
+];
+
 const Inquiry = () => {
     const { t } = useLanguage();
 
@@ -30,16 +39,42 @@ const Inquiry = () => {
                             </span>
                         </h2>
 
-                        <p className="text-slate-500 text-lg md:text-xl font-light max-w-md mb-12 leading-relaxed">
+                        <p className="text-slate-500 text-lg md:text-xl font-light max-w-md mb-8 leading-relaxed">
                             {t('inquiryDesc')}
                         </p>
 
-                        {/* Aesthetic Floating Image Card */}
-                        <div className="relative w-full max-w-sm rounded-[2rem] p-4 bg-white shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)]  hidden md:block">
-                            <img
-                                src="https://images.unsplash.com/photo-1592833159155-c62df1b65634?q=80&w=2069&auto=format&fit=crop"
-                                alt="Solar Panel Installation"
-                                className="w-full h-48 object-cover rounded-2xl"
+                        {/* Phone Numbers */}
+                        <div className="flex flex-col gap-3 mb-8">
+                            <a href="tel:+917041455045" className="inline-flex items-center gap-3 text-slate-700 hover:text-orange-500 transition-colors group">
+                                <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all">
+                                    <svg className="w-4.5 h-4.5 text-orange-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <span className="font-semibold text-base">+91 70414 55045</span>
+                            </a>
+                            <a href="tel:+916358304071" className="inline-flex items-center gap-3 text-slate-700 hover:text-orange-500 transition-colors group">
+                                <div className="w-10 h-10 rounded-xl bg-orange-50 border border-orange-100 flex items-center justify-center group-hover:bg-orange-500 group-hover:border-orange-500 transition-all">
+                                    <svg className="w-4.5 h-4.5 text-orange-500 group-hover:text-white transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <span className="font-semibold text-base">+91 63583 04071</span>
+                            </a>
+                        </div>
+
+                        {/* Google Maps Embed */}
+                        <div className="relative w-full max-w-md rounded-[2rem] overflow-hidden shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] border border-slate-200 hidden md:block">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3692.218355548208!2d70.70625807506836!3d22.269716979708612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDE2JzExLjAiTiA3MMKwNDInMzEuOCJF!5e0!3m2!1sen!2sin!4v1781889926743!5m2!1sen!2sin"
+                                width="100%"
+                                height="200"
+                                style={{ border: 0 }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="CTONE Solar Location"
+                                className="w-full"
                             />
                         </div>
                     </div>
@@ -53,98 +88,43 @@ const Inquiry = () => {
 
                             <form className="space-y-6">
 
-                                {/* 2-Column Grid for shorter inputs */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {/* Full Name */}
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-slate-700 ml-1">{t('fullName')}</label>
-                                        <input
-                                            type="text"
-                                            placeholder="John Doe"
-                                            className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all placeholder:text-slate-400"
-                                        />
-                                    </div>
-
-                                    {/* Phone Number */}
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-slate-700 ml-1">{t('phoneNumber')}</label>
-                                        <input
-                                            type="tel"
-                                            placeholder="+1 (555) 000-0000"
-                                            className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all placeholder:text-slate-400"
-                                        />
-                                    </div>
-
-                                    {/* Email Address */}
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-slate-700 ml-1">{t('emailAddress')}</label>
-                                        <input
-                                            type="email"
-                                            placeholder="john@example.com"
-                                            className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all placeholder:text-slate-400"
-                                        />
-                                    </div>
-
-                                    {/* City */}
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-slate-700 ml-1">{t('city')}</label>
-                                        <input
-                                            type="text"
-                                            placeholder="Your City"
-                                            className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all placeholder:text-slate-400"
-                                        />
-                                    </div>
-                                </div>
-
-                                {/* Dropdowns */}
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {/* Property Type */}
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-slate-700 ml-1">{t('propertyType')}</label>
-                                        <div className="relative">
-                                            <select className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all appearance-none cursor-pointer">
-                                                <option value="" disabled selected>{t('selectPropertyType')}</option>
-                                                <option value="residential">{t('optResidential')}</option>
-                                                <option value="commercial">{t('optCommercial')}</option>
-                                                <option value="industrial">{t('optIndustrial')}</option>
-                                            </select>
-                                            {/* Custom dropdown arrow */}
-                                            <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
-                                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    {/* Monthly Bill */}
-                                    <div className="space-y-2">
-                                        <label className="text-sm font-semibold text-slate-700 ml-1">{t('monthlyElectricityBill')}</label>
-                                        <div className="relative">
-                                            <select className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all appearance-none cursor-pointer">
-                                                <option value="" disabled selected>{t('selectAverageBill')}</option>
-                                                <option value="under100">{t('optUnder100')}</option>
-                                                <option value="100to200">{t('opt100to200')}</option>
-                                                <option value="200to300">{t('opt200to300')}</option>
-                                                <option value="over300">{t('optOver300')}</option>
-                                            </select>
-                                            <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
-                                                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                {/* Message */}
+                                {/* Full Name */}
                                 <div className="space-y-2">
-                                    <label className="text-sm font-semibold text-slate-700 ml-1">{t('message')}</label>
-                                    <textarea
-                                        rows="4"
-                                        placeholder={t('tellUsNeeds')}
-                                        className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all placeholder:text-slate-400 resize-none"
-                                    ></textarea>
+                                    <label className="text-sm font-semibold text-slate-700 ml-1">{t('fullName')}</label>
+                                    <input
+                                        type="text"
+                                        placeholder="John Doe"
+                                        className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all placeholder:text-slate-400"
+                                    />
+                                </div>
+
+                                {/* Phone Number */}
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-slate-700 ml-1">{t('phoneNumber')}</label>
+                                    <input
+                                        type="tel"
+                                        placeholder="+91 98765 43210"
+                                        className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all placeholder:text-slate-400"
+                                    />
+                                </div>
+
+                                {/* City Dropdown */}
+                                <div className="space-y-2">
+                                    <label className="text-sm font-semibold text-slate-700 ml-1">{t('city')}</label>
+                                    <div className="relative">
+                                        <select className="w-full px-5 py-3.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-700 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all appearance-none cursor-pointer">
+                                            <option value="" disabled selected>{t('selectCity')}</option>
+                                            {GUJARAT_CITIES.map((city) => (
+                                                <option key={city} value={city}>{city}</option>
+                                            ))}
+                                        </select>
+                                        {/* Custom dropdown arrow */}
+                                        <div className="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-slate-400">
+                                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 {/* Submit Button */}

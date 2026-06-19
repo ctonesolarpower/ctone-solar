@@ -7,47 +7,25 @@ const Testimonials = () => {
     const testimonials = [
         {
             id: 1,
-            text: "Our electricity bills dropped significantly after installation. The entire process was smooth and professional.",
-            name: "Sarah Livingston",
-            role: "Prof. contractor",
-            avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop"
+            textKey: "testimonial1Text",
+            nameKey: "testimonial1Name"
         },
         {
             id: 2,
-            text: "Excellent service from consultation to commissioning. Highly recommended.",
-            name: "David Chen",
-            role: "Business Owner",
-            avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop"
+            textKey: "testimonial2Text",
+            nameKey: "testimonial2Name"
         },
         {
             id: 3,
-            text: "The team delivered exactly what they promised. Great support and quality work.",
-            name: "Marcus Johnson",
-            role: "Homeowner",
-            avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&auto=format&fit=crop"
+            textKey: "testimonial3Text",
+            nameKey: "testimonial3Name"
         },
         {
             id: 4,
-            text: "We recovered our investment faster than expected. Very satisfied with the results.",
-            name: "Emily Carter",
-            role: "Operations Manager",
-            avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop"
+            textKey: "testimonial4Text",
+            nameKey: "testimonial4Name"
         }
     ];
-
-    const textKeyMap = {
-        "Our electricity bills dropped significantly after installation. The entire process was smooth and professional.": "testimonial1Text",
-        "Excellent service from consultation to commissioning. Highly recommended.": "testimonial2Text",
-        "The team delivered exactly what they promised. Great support and quality work.": "testimonial3Text",
-        "We recovered our investment faster than expected. Very satisfied with the results.": "testimonial4Text"
-    };
-
-    const roleKeyMap = {
-        "Prof. contractor": "testimonial1Role",
-        "Business Owner": "testimonial2Role",
-        "Homeowner": "testimonial3Role",
-        "Operations Manager": "testimonial4Role"
-    };
 
     // Extracted Card component for clean code
     const TestimonialCard = ({ testimonial }) => (
@@ -61,7 +39,7 @@ const Testimonials = () => {
                 </div>
                 {/* Review Text */}
                 <p className="text-slate-600 text-[15px] leading-relaxed italic mb-6 font-medium">
-                    "{t(textKeyMap[testimonial.text] || testimonial.text)}"
+                    "{t(testimonial.textKey)}"
                 </p>
             </div>
 
@@ -69,14 +47,14 @@ const Testimonials = () => {
             <div>
                 <div className="h-px bg-slate-200/60 w-full mb-5" />
                 <div className="flex items-center gap-4">
-                    <img
-                        src={testimonial.avatar}
-                        alt={testimonial.name}
-                        className="w-11 h-11 rounded-full object-cover border-2 border-white shadow-sm"
-                    />
+                    {/* User Vector Icon Silhouette Skeleton */}
+                    <div className="w-11 h-11 rounded-full bg-orange-100 flex items-center justify-center border border-orange-200 shadow-inner text-orange-500 shrink-0">
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                        </svg>
+                    </div>
                     <div>
-                        <h4 className="text-slate-900 font-bold text-sm tracking-tight">{testimonial.name}</h4>
-                        <p className="text-slate-400 text-xs font-medium">{t(roleKeyMap[testimonial.role] || testimonial.role)}</p>
+                        <h4 className="text-slate-900 font-bold text-sm tracking-tight">{t(testimonial.nameKey)}</h4>
                     </div>
                 </div>
             </div>

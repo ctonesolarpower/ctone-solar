@@ -60,12 +60,12 @@ export const translations = {
 
     // AboutUs
     aboutUsTitle: "About Us",
-    aboutUsMainDesc: "At Sunora, we are committed to helping homes and businesses transition to clean and sustainable energy. Our mission is to provide reliable solar power solutions that reduce electricity costs and create a positive environmental impact.",
+    aboutUsMainDesc: "At CTONE, we are dedicated to helping homes and businesses across India transition to clean, reliable, and cost-effective solar energy. We help you leverage government subsidies like PM Surya Ghar: Muft Bijli Yojana to reduce your electricity bills to zero.",
     statHappyCustomers: "Happy Customers",
-    statCountries: "150+ countries",
+    statCountries: "Across Gujarat",
     statMegawatts: "Megawatts of solar installed",
     statWorkingSuccessfully: "Working Successfully",
-    aboutUsBottomDesc: "With years of industry experience, our team specializes in designing, supplying, and installing customized solar systems tailored to each customer's energy requirements. Whether you need a residential rooftop system or a large commercial installation, we deliver quality, efficiency, and long-term value.",
+    aboutUsBottomDesc: "With extensive local expertise in Gujarat, our team specializes in designing, supplying, and installing premium rooftop solar systems. We manage the entire subsidy and net-metering process, ensuring maximum efficiency and savings for your residential or commercial space.",
 
     // Gallery
     ourWorkGallery: "Our Work Gallery",
@@ -87,14 +87,14 @@ export const translations = {
     // Testimonials
     testimonialsTitle: "Testimonials",
     realResultsFeedback: "Real results, real feedback",
-    testimonial1Text: "Our electricity bills dropped significantly after installation. The entire process was smooth and professional.",
-    testimonial1Role: "Prof. contractor",
-    testimonial2Text: "Excellent service from consultation to commissioning. Highly recommended.",
-    testimonial2Role: "Business Owner",
-    testimonial3Text: "The team delivered exactly what they promised. Great support and quality work.",
-    testimonial3Role: "Homeowner",
-    testimonial4Text: "We recovered our investment faster than expected. Very satisfied with the results.",
-    testimonial4Role: "Operations Manager",
+    testimonial1Name: "Priya Sharma",
+    testimonial1Text: "We installed a 3kW solar system and our monthly bill dropped from ₹6,000 to almost zero! The subsidy process under PM Surya Ghar was handled smoothly by CTONE.",
+    testimonial2Name: "Rajesh Patel",
+    testimonial2Text: "Highly recommend CTONE Solar. Our commercial unit in Rajkot is now running completely on clean energy, and our operational costs have reduced drastically.",
+    testimonial3Name: "Sanjay Mehta",
+    testimonial3Text: "Superb installation quality and excellent customer service. The CTONE team helped us with the net-metering approvals in Vadodara without any hassle.",
+    testimonial4Name: "Anjali Shah",
+    testimonial4Text: "Our textile unit in Surat needed a major power backup. CTONE designed a custom solar grid system that has saved us lakhs of rupees in power bills.",
 
     // Inquiry
     freeConsultation: "Free Consultation",
@@ -105,6 +105,7 @@ export const translations = {
     phoneNumber: "Phone Number",
     emailAddress: "Email Address",
     city: "City",
+    selectCity: "Select your city",
     propertyType: "Property Type",
     monthlyElectricityBill: "Monthly Electricity Bill",
     message: "Message",
@@ -129,8 +130,7 @@ export const translations = {
     support: "Support",
     privacyPolicy: "Privacy Policy",
     termsOfService: "Terms of Service"
-  },
-  gu: {
+  },  gu: {
     // SolarLanding / Navbar
     brand: "CTONE",
     home: "હોમ",
@@ -170,8 +170,8 @@ export const translations = {
     makingEverythingNiro: "નીરો સોલરથી બધું જ બનાવવું",
     save: "બચત",
     solarBestProduction: "સોલર એનર્જી શ્રેષ્ઠ ઉત્પાદન",
-    solarBestProductionDesc: "અમે પુનઃપ્રાપ્ય ઉર્જા દ્વારા સંચાલિત ઉજ્જવળ અને સ્વચ્છ વિશ્વમાં માનીએ છીએ. અમારા સોલર ઉકેલો તમારી વીજળીના ખર્ચ ઘટાડવા, મિલકતનું મૂલ્ય વધારવા અને આવનારી પેઢીઓ માટે હરિયાળું વાતાવરણ બનાવવા માટે ડિઝાઇન કરવામાં આવ્યા છે.",
-    buildingBetterFuture: "અમે વધુ સારા ભવિષ્યનું નિર્માણ કરી રહ્યા છીએ",
+    solarBestProductionDesc: "અમે પુનઃપ્રાપ્ય ઉર્જા દ્વારા સંચાલિત ઉજ્જવળ અને સ્વચ્છ વિશ્વમાં માનીએ છીએ. અમારા સોલર ઉકેલો તમારી વીજળીના ખર્ચ ઘટાડવા, મિલકતનું મૂલ્ય વધારવા અને ભાવિ પેઢીઓ માટે હરિયાળું વાતાવરણ બનાવવા માટે ડિઝાઇન કરવામાં આવ્યા છે.",
+    buildingBetterFuture: "અમે બહેતર ભવિષ્યનું નિર્માણ કરી રહ્યા છીએ",
     buildingBetterFutureDesc: "અમે પુનઃપ્રાપ્ય ઉર્જા દ્વારા સંચાલિત ઉજ્જવળ અને સ્વચ્છ વિશ્વમાં માનીએ છીએ. અમારા સોલર ઉકેલો તમારી વીજળીના ખર્ચ ઘટાડવા, મિલકતનું મૂલ્ય વધારવા અને ઉજ્જવળ ટકાઉ ભવિષ્યનું નિર્માણ કરવા માટે ડિઝાઇન કરવામાં આવ્યા છે.",
 
     // SolarServices
@@ -191,12 +191,36 @@ export const translations = {
 
     // AboutUs
     aboutUsTitle: "અમારા વિશે",
-    aboutUsMainDesc: "Sunora ખાતે, અમે ઘરો અને વ્યવસાયોને સ્વચ્છ અને ટકાઉ ઉર્જા તરફ જવા માટે મદદ કરવા પ્રતિબદ્ધ છીએ. અમારું મિશન વિશ્વસનીય સોલર પાવર ઉકેલો પ્રદાન કરવાનું છે જે વીજળીના ખર્ચ ઘટાડે છે અને પર્યાવરણ પર હકારાત્મક અસર કરે છે.",
+    aboutUsMainDesc: "CTONE ખાતે, અમે સમગ્ર ભારતમાં ઘરો અને વ્યવસાયોને સ્વચ્છ, વિશ્વસનીય અને આર્થિક સોલર ઉર્જા તરફ આગળ વધવામાં મદદ કરવા પ્રતિબદ્ધ છીએ. અમે તમને પીએમ સૂર્ય ઘર: મુફ્ત બીજલી યોજના જેવી સરકારી સબસિડીનો લાભ મેળવીને તમારા વીજળીના બિલને શૂન્ય કરવા માટે મદદ કરીએ છીએ.",
     statHappyCustomers: "ખુશ ગ્રાહકો",
-    statCountries: "૧૫૦+ દેશો",
+    statCountries: "સમગ્ર ગુજરાતમાં",
     statMegawatts: "સ્થાપિત સોલર મેગાવોટ",
     statWorkingSuccessfully: "સફળતાપૂર્વક કાર્યરત",
-    aboutUsBottomDesc: "વર્ષોના ઉદ્યોગ અનુભવ સાથે, અમારી ટીમ દરેક ગ્રાહકની ઉર્જા જરૂરિયાતોને અનુરૂપ કસ્ટમાઇઝ્ડ સોલર સિસ્ટમ્સ ડિઝાઇન, સપ્લાય અને ઇન્સ્ટોલ કરવામાં નિષ્ણાત છે. ભલે તમને રહેણાંક રૂફટોપ સિસ્ટમની જરૂર હોય કે મોટા વ્યાવસાયિક ઇન્સ્ટોલેશનની, અમે ગુણવત્તા, કાર્યક્ષમતા અને લાંબા ગાળાનું મૂલ્ય પ્રદાન કરીએ છીએ.",
+    aboutUsBottomDesc: "ગુજરાતમાં સ્થાનિક અનુભવ સાથે, અમારી ટીમ પ્રીમિયમ રૂફટોપ સોલર સિસ્ટમ્સ ડિઝાઇન, સપ્લાય અને ઇન્સ્ટોલ કરવામાં નિષ્ણાત છે. અમે સબસિડી અને નેટ-મીટરિંગની સમગ્ર પ્રક્રિયા સંભાળીએ છીએ, જેથી રહેણાંક અને વ્યાવસાયિક સ્તરે વધુ બચત થાય.',��યમ રૂફટોપ સોલર સિસ્ટમ્સ ડિઝાઇન, સપ્લાય અને ઇન્સ્ટોલ કરવામાં નિષ્ણાત છે. અમે સબસિડી અને નેટ-મીટરિંગની સમગ્ર પ્રક્રિયા સંભાળીએ છીએ, જેથી રહેણાંક અને વ્યાવસાયિક સ્તરે વધુ બચત થાય.',ઉજ્જવળ અને સ્વચ્છ વિશ્વમાં માનીએ છીએ. અમારા સોલર ઉકેલો તમારી વીજળીના ખર્ચ ઘટાડવા, મિલકતનું મૂલ્ય વધારવા અને ઉજ્જવળ ટકાઉ ભવિષ્યનું નિર્માણ કરવા માટે ડિઝાઇન કરવામાં આવ્યા છે.",
+
+    // SolarServices
+    ourSolutions: "અમારા ઉકેલો",
+    solarSolutions: "સોલર સોલ્યુશન્સ",
+    forEveryNeed: "દરેક જરૂરિયાત માટે",
+    residentialSolarSystemsTitle: "રહેણાંક સોલર સિસ્ટમ્સ",
+    residentialSolarSystemsDesc: "ઘરો અને એપાર્ટમેન્ટ્સ માટે વિશ્વસનીય રૂફટોપ સોલર ઉકેલો.",
+    commercialSolarSolutionsTitle: "વ્યાવસાયિક સોલર ઉકેલો",
+    commercialSolarSolutionsDesc: "કાર્યક્ષમ વ્યાવસાયિક સોલર સિસ્ટમ્સ સાથે ઓપરેશનલ ખર્ચ ઘટાડો.",
+    solarMaintenance: "સોલર મેન્ટેનન્સ",
+    solarMaintenanceDesc: "શ્રેષ્ઠ કામગીરી માટે નિયમિત તપાસ અને જાળવણી.",
+    learnMore: "વધુ જાણો",
+    solarMonitoringSupport: "સોલર મોનિટરિંગ અને સપોર્ટ",
+    solarMonitoringSupportDesc: "રીઅલ-ટાઇમમાં ઉર્જા ઉત્પાદનને ટ્રૅક કરો અને નિષ્ણાત તકનીકી સપોર્ટ મેળવો.",
+    online: "ઓનલાઇન",
+
+    // AboutUs
+    aboutUsTitle: "અમારા વિશે",
+    aboutUsMainDesc: "CTONE ખાતે, અમે સમગ્ર ભારતમાં ઘરો અને વ્યવસાયોને સ્વચ્છ, વિશ્વસનીય અને આર્થિક સોલર ઉર્જા તરફ આગળ વધવામાં મદદ કરવા પ્રતિબદ્ધ છીએ. અમે તમને પીએમ સૂર્ય ઘર: મુફ્ત બીજલી યોજના જેવી સરકારી સબસિડીનો લાભ મેળવીને તમારા વીજળીના બિલને શૂન્ય કરવા માટે મદદ કરીએ છીએ.",
+    statHappyCustomers: "ખુશ ગ્રાહકો",
+    statCountries: "સમગ્ર ગુજરાતમાં",
+    statMegawatts: "સ્થાપિત સોલર મેગાવોટ",
+    statWorkingSuccessfully: "સફળતાપૂર્વક કાર્યરત",
+    aboutUsBottomDesc: "ગુજરાતમાં સ્થાનિક અનુભવ સાથે, અમારી ટીમ પ્રીમિયમ રૂફટોપ સોલર સિસ્ટમ્સ ડિઝાઇન, સપ્લાય અને ઇન્સ્ટોલ કરવામાં નિષ્ણાત છે. અમે સબસિડી અને નેટ-મીટરિંગની સમગ્ર પ્રક્રિયા સંભાળીએ છીએ, જેથી રહેણાંક અને વ્યાવસાયિક સ્તરે વધુ બચત થાય.",
 
     // Gallery
     ourWorkGallery: "અમારી કાર્ય ગેલેરી",
@@ -218,14 +242,14 @@ export const translations = {
     // Testimonials
     testimonialsTitle: "પ્રશંસાપત્રો",
     realResultsFeedback: "વાસ્તવિક પરિણામો, વાસ્તવિક પ્રતિસાદ",
-    testimonial1Text: "ઇન્સ્ટોલેશન પછી અમારા વીજળીના બિલમાં નોંધપાત્ર ઘટાડો થયો છે. સમગ્ર પ્રક્રિયા સરળ અને વ્યાવસાયિક હતી.",
-    testimonial1Role: "પ્રોફેશનલ કોન્ટ્રાક્ટર",
-    testimonial2Text: "પરામર્શથી લઈને કમિશનિંગ સુધી ઉત્કૃષ્ટ સેવા. ખુબ જ ભલામણ કરેલ.",
-    testimonial2Role: "વ્યવસાય માલિક",
-    testimonial3Text: "ટીમે જે વચન આપ્યું હતું તે જ પહોંચાડ્યું. ઉત્તમ સપોર્ટ અને ગુણવત્તાયુક્ત કામ.",
-    testimonial3Role: "ઘરમાલિક",
-    testimonial4Text: "અમે અપેક્ષા કરતાં વધુ ઝડપથી અમારું રોકાણ પાછું મેળવ્યું. પરિણામોથી ખૂબ સંતુષ્ટ.",
-    testimonial4Role: "ઓપરેશન મેનેજર",
+    testimonial1Name: "પ્રિયા શર્મા",
+    testimonial1Text: "અમે ૩ કિલોવોટની સોલર સિસ્ટમ ઇન્સ્ટોલ કરી અને અમારું માસિક બિલ ₹૬,૦૦૦ થી ઘટીને લગભગ શૂન્ય થઈ ગયું! પીએમ સૂર્ય ઘર હેઠળની સબસિડી પ્રક્રિયા CTONE દ્વારા સરળતાથી સંભાળવામાં આવી હતી.",
+    testimonial2Name: "રાજેશ પટેલ",
+    testimonial2Text: "CTONE સોલરની ખૂબ ભલામણ કરીએ છીએ. રાજકોટમાં અમારો કોમર્શિયલ યુનિટ હવે સંપૂર્ણપણે સ્વચ્છ ઉર્જા પર ચાલે છે, અને અમારો ઓપરેશનલ ખર્ચ ઘણો ઘટી ગયો છે.",
+    testimonial3Name: "સંજય મહેતા",
+    testimonial3Text: "શ્રેષ્ઠ ઇન્સ્ટોલેશન ગુણવત્તા અને ઉત્તમ ગ્રાહક સેવા. CTONE ની ટીમે વડોદરામાં નેટ-મીટરિંગ મંજૂરીઓ મેળવવામાં અમને કોઈ મુશ્કેલી વિના મદદ કરી.",
+    testimonial4Name: "અંજલિ શાહ",
+    testimonial4Text: "સુરતમાં અમારા ટેક્સટાઈલ યુનિટને મોટા પાવર બેકઅપની જરૂર હતી. CTONE એ કસ્ટમ સોલર ગ્રીડ સિસ્ટમ ડિઝાઇન કરી જેણે પાવર બિલમાં લાખો રૂપિયા બચાવ્યા છે.",
 
     // Inquiry
     freeConsultation: "મફત પરામર્શ",
@@ -236,6 +260,7 @@ export const translations = {
     phoneNumber: "ફોન નંબર",
     emailAddress: "ઇમેઇલ સરનામું",
     city: "શહેર",
+    selectCity: "તમારું શહેર પસંદ કરો",
     propertyType: "મિલકતનો પ્રકાર",
     monthlyElectricityBill: "માસિક વીજળી બિલ",
     message: "સંદેશ",
